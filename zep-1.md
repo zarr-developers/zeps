@@ -1,10 +1,6 @@
 # ZEP 1 - Zarr version 3
 
----
-
-Author:
-
-* Alistair Miles <alistair.miles@sanger.ac.uk>
+Author: Alistair Miles <alistair.miles@sanger.ac.uk>
 
 Status: Draft
 
@@ -18,7 +14,7 @@ Created: 2022-05-23
 This ZEP proposes a new major version of the core specification which
 defines how to store and retrieve Zarr data. The ZEP also proposes a
 new framework for modularising specifications of codecs, storage
-systems and protocol extensions.
+systems and extensions.
 
 
 ## Motivation and Scope
@@ -42,10 +38,10 @@ version 2 have surfaced. These include:
   use of NumPy concepts and machinery. A more language-agnostic
   approach to the core specification, together with some slimming down
   of the specification, would help to achieve complete implementations
-  with full interperobility across major programming languages.
+  with full interoperobility across major programming languages.
 
-* **Extensibility**. Zarr verion 2 has been used already for storage
-  of some very large and keystone scientific datasets. If this trend
+* **Extensibility**. Zarr is increasingly being used for storage of
+  very large and keystone scientific datasets. If this trend
   continues, interoperability and stability of the Zarr ecosystem will
   be vital, to allow these datasets to be utilised to their full
   potential. At the same time, large-scale array data storage is a
@@ -55,51 +51,91 @@ version 2 have surfaced. These include:
   stability and innovation, some framework for community exploration
   and development of Zarr extensions is needed, so that innovation can
   happen in a coordinated way with predictable consequences and
-  behaviour of implementations which may or may not support
-  extensions.
+  behaviour of implementations which may not support all extensions.
 
-* **Storage**. Zarr version 2 was originally developed to support
-  local file system storage only. Because of this, the design of Zarr
-  version 2 implicitly made certain assumptions about the performance
-  characteristics of the underlying storage system, such as low
-  latency of storage operations to list directories and retrieve small
-  files. Fortunately, certain features of Zarr 2 allowed other storage
-  systems to be used, such as cloud object stores, and this ability to
-  utilise a variety of different underlying storage systems has been
-  very valuable across a range of use cases. However, performance of
-  certain operations can degrade significantly with some storage
-  systems, particularly systems with relatively high latency per
-  operation, such as cloud object stores. This limitation has been
-  worked around through the use of consolidated metadata, but this
-  workaround introduces other limitations, such as additional
+* **High-latency storage**. Zarr version 2 was originally developed to
+  support local file system storage only. Because of this, the design
+  of Zarr version 2 implicitly made assumptions about the performance
+  characteristics of the underlying storage technology, such as low
+  latency for storage operations to list directories and retrieve
+  small files. Fortunately, certain features of Zarr 2 still enabled
+  other storage systems to be used, such as cloud object stores, and
+  this ability to utilise a variety of different underlying storage
+  systems has been very valuable across a range of use cases. However,
+  performance of certain operations can degrade significantly with
+  some storage technologies, particularly systems with relatively high
+  latency per operation, such as cloud object stores. This limitation
+  has been worked around through the use of consolidated metadata, but
+  this workaround introduces other limitations, such as additional
   complexity when adding or modifying data.
 
-@@TODO wrap up.
+* **Storage layout flexibility**. Zarr version 2 adopts a simple
+  storage model where each chunk is encoded and then written to a
+  single storage object. This simplicity makes implementation easier,
+  but presents some practical challenges. For example, for large
+  datasets this can generate a very large number of storage objects,
+  which does not work well for certain storage systems. Also, this
+  forces one retrieval operation per chunk, which can be suboptimal
+  where there are many chunks that are often read together, and/or
+  where different access patterns need to be accommodated.
+
+These limitations have motivated the proposal described here to define
+a new major version of the Zarr core specification, together with a
+new modular specification framework.
+
+Normally, it is better to introduce changes in small pieces, allowing
+each to be evaluated and discussed in isolation. However, addressing
+the limitations described above could not be done without introducing
+backwards-incompatible changes into the core specification, and thus
+multiple such changes are combined here, in an attempt to minimise the
+overall disruption to the ecosystem and the community.
 
 
 ## Usage and Impact
 
-@@TODO
+This ZEP and the associated specifications have the following intended
+outcomes:
 
-This section describes how users of Zarr will use the new features,
-spec changes or a new process described in this ZEP. It should be
-comprised mainly of code examples that wouldn’t be possible without
-acceptance and implementation of this ZEP, as well as the impact the
-proposed changes would have on the ecosystem. This section should be
-written from the perspective of the users of Zarr, and the benefit it
-will provide them; as such, it should include implementation details
-only if necessary to explain the functionality.
+1. Facilitate implementation of a core specification with feature
+   parity and full interoperability across all major programming
+   languages.
+
+2. Accelerate innovation by facilitating the exploration, development,
+   implementation and evaluation of Zarr systems with novel codecs and
+   extensions by a broader community.
+
+3. Ensure reasonable performance characteristics of all Zarr
+   implementations across a variety of different underlying storage
+   technologies, including storage with high latency per operation.
+
+4. Improve the performance characteristics of Zarr implementations for
+   data with a very large number of chunks and/or with a variety of
+   common access patterns.
+
+Adopting this ZEP would have the following disruptive impacts on the
+members of the Zarr community:
+
+* Effort and coordination would be required to implement the
+  specifications in all current Zarr software libraries and verify
+  interoperability.
+
+* Effort would be required by data producers to migrate to generating
+  data conformant with the new specifications.
+
+* Some effort may be required by users of Zarr data and/or Zarr
+  software libraries to learn about and understand the differences in
+  available features and/or how certain features are accessed.
 
 
 ## Backward Compatibility
 
-@@TODO
+This ZEP introduces a Zarr core specification version 3, which is
+backwards-incompatible with the Zarr version 2 specification
+[ZARR2SPEC](#ref-ZARR2SPEC).
 
-This section describes how the ZEP breaks backward compatibility.
-
-Its purpose is to provide a high-level summary to users who are not
-interested in detailed technical discussion, but may have opinions
-around, e.g., usage and impact.
+Implementations of the Zarr version 3 core specification are not
+required to be able to read or write data conforming to the Zarr
+version 2 specification, and vice versa.
 
 
 ## Detailed description
@@ -113,12 +149,16 @@ be used, intended use-cases and pseudo-code illustrating its use.
 
 ## Related Work
 
+@@TODO
+
 This section should list relevant and/or similar technologies,
 possibly in other libraries. It does not need to be comprehensive,
 just list the major examples of prior and relevant art.
 
 
 ## Implementation
+
+@@TODO
 
 This section lists the major steps required to implement the
 ZEP. Where possible, it should be noted where one step is dependent on
@@ -134,12 +174,16 @@ phases).
 
 ## Alternatives
 
+@@TODO
+
 If there were any alternative solutions to solving the same problem,
 they should be discussed here, along with a justification for the
 chosen approach.
 
 
 ## Discussion
+
+@@TODO
 
 This section should have links related to any discussion regarding the
 ZEP. It could be GitHub issues and/or discussions. (The links to
