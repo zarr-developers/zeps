@@ -19,7 +19,7 @@ systems and extensions.
 
 ## Motivation and Scope
 
-Zarr version 2 [ZARR2SPEC](#ref-ZARR2SPEC) has been widely adopted and
+Zarr version 2 [[ZARR2SPEC](#ref-ZARR2SPEC)] has been widely adopted and
 implemented in several programming languages. It has enabled the use
 of cloud and distributed computing to process a variety of large and
 challenging datasets, particularly in the scientific domain. It has
@@ -131,7 +131,7 @@ members of the Zarr community:
 
 This ZEP introduces a Zarr core specification version 3, which is
 backwards-incompatible with the Zarr version 2 specification
-[ZARR2SPEC](#ref-ZARR2SPEC).
+[[ZARR2SPEC](#ref-ZARR2SPEC)].
 
 Implementations of the Zarr version 3 core specification are not
 required to be able to read or write data conforming to the Zarr
