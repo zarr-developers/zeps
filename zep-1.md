@@ -101,8 +101,9 @@ outcomes:
    languages.
 
 2. Accelerate innovation by facilitating the exploration, development,
-   implementation and evaluation of Zarr systems with novel codecs and
-   extensions by a broader community.
+   implementation and evaluation of Zarr systems with support for
+   novel encoding technologies, storage technologies and features by a
+   broader community.
 
 3. Ensure reasonable performance characteristics of all Zarr
    implementations across a variety of different underlying storage
