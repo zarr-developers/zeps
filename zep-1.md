@@ -156,9 +156,9 @@ specifications section.
 
 This ZEP proposes a modular specification framework, with the following components:
 
-* **`Zarr core specification
-  <https://zarr-specs.readthedocs.io/en/latest/core/v3.0.html>`_** --
-  This specification is the starting point for any Zarr
+* **[Zarr core
+  specification](https://zarr-specs.readthedocs.io/en/latest/core/v3.0.html)**
+  -- This specification is the starting point for any Zarr
   implementation. It defines in an abstract way a format for storing
   N-dimensional array data.
 
@@ -214,19 +214,19 @@ To illustrate the principle of the other specification types, the
 following specifications have also been published on the zarr-specs
 website:
 
-* `Codecs <https://zarr-specs.readthedocs.io/en/latest/codecs.html>`_
+* [Codecs](https://zarr-specs.readthedocs.io/en/latest/codecs.html)
 
-* Stores - `File system store
-  <https://zarr-specs.readthedocs.io/en/latest/stores/filesystem/v1.0.html>`_
+* Stores - [File system
+  store](https://zarr-specs.readthedocs.io/en/latest/stores/filesystem/v1.0.html)
 
-* Array extensions - `Filters
-  <https://zarr-specs.readthedocs.io/en/latest/extensions/array-extensions/filters/v1.0.html>`_
+* Array extensions -
+  [Filters](https://zarr-specs.readthedocs.io/en/latest/extensions/array-extensions/filters/v1.0.html)
 
-* Data types - `Datatime data types
-  <https://zarr-specs.readthedocs.io/en/latest/extensions/data-types/datetime/v1.0.html>`_
+* Data types - [Datetime data
+  types](https://zarr-specs.readthedocs.io/en/latest/extensions/data-types/datetime/v1.0.html)
 
-* Storage transformers - `Sharding storage transformer
-  <https://zarr-specs.readthedocs.io/en/latest/extensions/storage-transformers/sharding/v1.0.html>`_
+* Storage transformers - [Sharding storage
+  transformer](https://zarr-specs.readthedocs.io/en/latest/extensions/storage-transformers/sharding/v1.0.html)
 
 Note that some of these specifications are not complete at this
 time. We leave it open at this time whether the scope of this ZEP
