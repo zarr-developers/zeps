@@ -2,8 +2,9 @@
 
 Authors:
 
-    * Alistair Miles (`@alimanfoo <https://github.com/alimanfoo>`_), Wellcome Sanger Institute
-    * Jonathan Striebel (`@jstriebel <https://github.com/jstriebel>`_), Scalable Minds
+* Alistair Miles (`@alimanfoo <https://github.com/alimanfoo>`_), Wellcome Sanger Institute
+
+* Jonathan Striebel (`@jstriebel <https://github.com/jstriebel>`_), Scalable Minds
 
 Status: Draft
 
