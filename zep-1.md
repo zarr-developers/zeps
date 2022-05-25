@@ -1,6 +1,9 @@
 # ZEP 1 - Zarr specification version 3
 
-Author: Alistair Miles <alistair.miles@sanger.ac.uk>
+Authors:
+
+    * Alistair Miles (`@alimanfoo <https://github.com/alimanfoo>`_), Wellcome Sanger Institute
+    * Jonathan Striebel (`@jstriebel <https://github.com/jstriebel>`_), Scalable Minds
 
 Status: Draft
 
