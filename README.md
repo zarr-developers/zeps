@@ -1,2 +1,4 @@
-# zeps
-Zarr Enhancement Proposals
+# Zarr Enhancement Proposals (ZEPs)
+
+Community Feedback Process for Zarr Specifications
+
