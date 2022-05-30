@@ -1,6 +1,7 @@
 ---
 layout: default
 title: active ZEPs
+description: List of Active ZEPs
 nav_order: 2
 has_children: true
 permalink: /zeps/active_zeps/

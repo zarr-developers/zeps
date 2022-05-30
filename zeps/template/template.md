@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ZEP0000
+description: Template and instructions for proposing a new ZEP
 parent: template
 nav_order: 1
 ---
