@@ -4,7 +4,7 @@ title: draft ZEPs
 description: List of Draft ZEPs
 nav_order: 3
 has_children: true
-permalink: /zeps/draft_zeps/
+permalink: /draft_zeps/
 ---
 
 # Draft ZEPs

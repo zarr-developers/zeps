@@ -51,28 +51,6 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
-# Define Jekyll collections
-collections:
-  # Define a collection named "zeps", the ZEPS reside in the "_zeps" directory
-  zeps:
-    permalink: "/:collection/:path/"
-    output: true
-
-zeps:
-  # Define which collections are used in zeps
-  collections:
-    # Reference the "zeps" collection
-    zeps:
-      # Give the collection a name
-      name: Zarr Enhancement Proposal
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
-      nav_exclude: false
-      # Exclude the collection from the search
-      # Supports true or false (default)
-      search_exclude: false
-
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
