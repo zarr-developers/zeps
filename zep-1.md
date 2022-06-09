@@ -370,10 +370,29 @@ objects with prefix "/meta/root/foo" and delimiter "/".
 
 ## Storage transformers
 
-@@TODO describe introduction of storage transformers, and how these
-can be used to support more efficient data access via packing of
-multiple encoded chunks into a single storage object via the sharding
-extension.
+In Zarr version 2, every transformation of the storage layout would need to be
+reflected in the core indexing implementation or as a separate storage. The first
+option needs changes in the core implementation and is not easily extensible,
+whereas the second option is more easily extensible. However, some mechanism only
+change the data layout and still need an underlying storage, which needs to be
+configurable as before.
+
+For those use-cases, a Zarr storage transformer as introduced in Zarr version 3
+allows to change the zarr-compatible data in an intermediate step between the
+core indexing implementation and the storage layer. Data can be requested from
+the indexing implementation as before, and stored in any storage that could be
+configured beforehand, as the stored transformed data is restored to its
+original state whenever data is requested. To use multiple storage transformers,
+those may be stacked to combine different functionalities.
+
+One example extension that would be implemented as a storage transformer is the
+[sharding specification](https://zarr-specs.readthedocs.io/en/latest/extensions/storage-transformers/sharding/v1.0.html).
+Besides this, the following (non-exhaustive) list of concepts might possibly be
+implemented as storage transformers:
+* https://github.com/zarr-developers/zarr-specs/issues/82
+* https://github.com/zarr-developers/zarr-specs/issues/115
+* https://github.com/zarr-developers/zarr-specs/issues/76
+* https://github.com/zarr-developers/zarr-python/issues/556
 
 
 ## Related Work
@@ -383,6 +402,16 @@ extension.
 This section should list relevant and/or similar technologies,
 possibly in other libraries. It does not need to be comprehensive,
 just list the major examples of prior and relevant art.
+
+Related work for sharding:
+* Neuroglancer precomputed format supports sharding:
+  https://github.com/google/neuroglancer/blob/master/src/neuroglancer/datasource/precomputed/sharded.md
+* webKnossos-wrap, blocks correspond to Zarr chunks, files to shards:
+  https://github.com/scalableminds/webknossos-wrap#high-level-description
+* caterva, blocks correspond to Zarr chunks, caterva chunks to Zarr shards:
+  https://caterva.readthedocs.io/en/latest/getting_started/overview.html
+* Apache Arrow supports data partitioning:
+  https://arrow.apache.org/docs/python/dataset.html#reading-partitioned-data
 
 
 ## Implementation
@@ -419,6 +448,25 @@ chosen approach.
 This section should have links related to any discussion regarding the
 ZEP. It could be GitHub issues and/or discussions. (The links to
 discussions in past if any, goes in this section.)
+
+Discussions around storage transformers:
+* https://github.com/zarr-developers/zarr-specs/pull/134
+
+Discussions around sharding:
+* For the specification:
+  * https://github.com/zarr-developers/zarr-specs/issues/127
+  * https://github.com/zarr-developers/zarr-specs/pull/134
+* Initial issue in `zarr-python`:
+  * https://github.com/zarr-developers/zarr-python/issues/877
+* Different prototype implementations:
+  * https://github.com/alimanfoo/zarrita/pull/40
+  * https://github.com/zarr-developers/zarr-python/pull/876
+  * https://github.com/zarr-developers/zarr-python/pull/947
+* Other related discussions:
+  * https://forum.image.sc/t/ome-zarr-chunking-questions/66794
+  * https://forum.image.sc/t/sharding-support-in-ome-zarr/55409
+  * https://forum.image.sc/t/deciding-on-optimal-chunk-size/63023
+  * https://github.com/thewtex/shardedstore/issues/17
 
 
 ## References and Footnotes
