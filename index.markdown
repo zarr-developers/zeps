@@ -16,7 +16,7 @@ permalink: /
 Community Feedback Process for Zarr Specifications.
 {: .fs-6 .fw-300 }
 
-[Propose a new ZEP](https://zarr.dev/zeps/zeps/active/ZEP0000.html){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Propose a new ZEP](https://github.com/zarr-developers/zeps#proposing-a-new-zep){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View it on GitHub](https://github.com/zarr-developers/zeps){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
