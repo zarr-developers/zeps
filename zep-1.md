@@ -416,20 +416,20 @@ Related work for sharding:
 
 ## Implementation
 
-@@TODO zarrita
+The following projects contains the implementation of Zarr Version 3 protocol:
 
-@@TODO zarr v3 support in xtensor
+- zarrita: https://github.com/alimanfoo/zarrita
 
-This section lists the major steps required to implement the
-ZEP. Where possible, it should be noted where one step is dependent on
-another, and which steps may be optionally omitted. Where it makes
-sense, each step should include a link to related pull requests as the
-implementation progresses.
+Zarrita is a minimal, exploratory implementation of the [Zarr version
+3.0 core protocol](https://zarr-specs.readthedocs.io/en/latest/core/v3.0.html#zarr-core-specification-v3-0).
+This is a technical spike only, not for production use.
 
-Any pull requests or development branches containing work on this ZEP
-be linked to from here. (A ZEP does not need to be implemented in a
-single pull request if it makes sense to implement it in discrete
-phases).
+- xtensor: https://github.com/xtensor-stack/xtensor-zarr
+
+`xtensor-zarr` offers an API to create and access a Zarr (v2 or v3)
+hierarchy in a store (locally or in the cloud), read and write
+arrays (in various formats) and groups in the hierarchy, and explore
+the hierarchy.
 
 
 ## Alternatives
@@ -442,12 +442,6 @@ chosen approach.
 
 
 ## Discussion
-
-@@TODO
-
-This section should have links related to any discussion regarding the
-ZEP. It could be GitHub issues and/or discussions. (The links to
-discussions in past if any, goes in this section.)
 
 Discussions around storage transformers:
 * https://github.com/zarr-developers/zarr-specs/pull/134
@@ -468,6 +462,40 @@ Discussions around sharding:
   * https://forum.image.sc/t/deciding-on-optimal-chunk-size/63023
   * https://github.com/thewtex/shardedstore/issues/17
 
+Discussion around Zarr V3 Protocol:
+* Issues in `zarr-specs`:
+  * https://github.com/zarr-developers/zarr-specs/issues/140
+  * https://github.com/zarr-developers/zarr-specs/issues/136
+  * https://github.com/zarr-developers/zarr-specs/issues/133
+  * https://github.com/zarr-developers/zarr-specs/issues/96
+  * https://github.com/zarr-developers/zarr-specs/issues/76
+  * https://github.com/zarr-developers/zarr-specs/issues/84
+  * https://github.com/zarr-developers/zarr-specs/issues/87
+  * https://github.com/zarr-developers/zarr-specs/issues/82
+  * https://github.com/zarr-developers/zarr-specs/issues/80
+  * https://github.com/zarr-developers/zarr-specs/issues/53
+  * https://github.com/zarr-developers/zarr-specs/issues/13
+  * https://github.com/zarr-developers/zarr-specs/pull/16
+* PRs in `zarr-specs`:
+  * https://github.com/zarr-developers/zarr-specs/pull/16
+  * https://github.com/zarr-developers/zarr-specs/pull/17
+  * https://github.com/zarr-developers/zarr-specs/pull/18
+  * https://github.com/zarr-developers/zarr-specs/pull/22
+  * https://github.com/zarr-developers/zarr-specs/pull/24
+  * https://github.com/zarr-developers/zarr-specs/pull/25
+  * https://github.com/zarr-developers/zarr-specs/pull/27
+  * https://github.com/zarr-developers/zarr-specs/pull/28
+  * https://github.com/zarr-developers/zarr-specs/pull/29
+  * https://github.com/zarr-developers/zarr-specs/pull/30
+  * https://github.com/zarr-developers/zarr-specs/pull/31
+  * https://github.com/zarr-developers/zarr-specs/pull/32
+  * https://github.com/zarr-developers/zarr-specs/pull/34
+  * https://github.com/zarr-developers/zarr-specs/pull/35
+  * https://github.com/zarr-developers/zarr-specs/pull/24
+  * https://github.com/zarr-developers/zarr-specs/pull/54
+  * https://github.com/zarr-developers/zarr-specs/pull/67
+  * https://github.com/zarr-developers/zarr-specs/pull/143
+  * https://github.com/zarr-developers/zarr-specs/pull/146
 
 ## References and Footnotes
 
