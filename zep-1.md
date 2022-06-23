@@ -420,13 +420,13 @@ The following projects contains the implementation of Zarr Version 3 protocol:
 
 - zarrita: https://github.com/alimanfoo/zarrita
 
-Zarrita is a minimal, exploratory implementation of the [Zarr version
+> Zarrita is a minimal, exploratory implementation of the [Zarr version
 3.0 core protocol](https://zarr-specs.readthedocs.io/en/latest/core/v3.0.html#zarr-core-specification-v3-0).
 This is a technical spike only, not for production use.
 
 - xtensor: https://github.com/xtensor-stack/xtensor-zarr
 
-`xtensor-zarr` offers an API to create and access a Zarr (v2 or v3)
+> `xtensor-zarr` offers an API to create and access a Zarr (v2 or v3)
 hierarchy in a store (locally or in the cloud), read and write
 arrays (in various formats) and groups in the hierarchy, and explore
 the hierarchy.
@@ -440,62 +440,59 @@ If there were any alternative solutions to solving the same problem,
 they should be discussed here, along with a justification for the
 chosen approach.
 
-
 ## Discussion
 
-Discussions around storage transformers:
-* https://github.com/zarr-developers/zarr-specs/pull/134
+1. Discussions around storage transformers:
+    * https://github.com/zarr-developers/zarr-specs/pull/134
 
-Discussions around sharding:
-* For the specification:
-  * https://github.com/zarr-developers/zarr-specs/issues/127
-  * https://github.com/zarr-developers/zarr-specs/pull/134
-* Initial issue in `zarr-python`:
-  * https://github.com/zarr-developers/zarr-python/issues/877
-* Different prototype implementations:
-  * https://github.com/alimanfoo/zarrita/pull/40
-  * https://github.com/zarr-developers/zarr-python/pull/876
-  * https://github.com/zarr-developers/zarr-python/pull/947
-* Other related discussions:
-  * https://forum.image.sc/t/ome-zarr-chunking-questions/66794
-  * https://forum.image.sc/t/sharding-support-in-ome-zarr/55409
-  * https://forum.image.sc/t/deciding-on-optimal-chunk-size/63023
-  * https://github.com/thewtex/shardedstore/issues/17
+2. Discussions around sharding:
+    * For the specification:
+      * https://github.com/zarr-developers/zarr-specs/issues/127
+      * https://github.com/zarr-developers/zarr-specs/pull/134
+    * Initial issue in `zarr-python`:
+      * https://github.com/zarr-developers/zarr-python/issues/877
+    * Different prototype implementations:
+      * https://github.com/alimanfoo/zarrita/pull/40
+      * https://github.com/zarr-developers/zarr-python/pull/876
+      * https://github.com/zarr-developers/zarr-python/pull/947
+    * Other related discussions:
+      * https://forum.image.sc/t/ome-zarr-chunking-questions/66794
+      * https://forum.image.sc/t/sharding-support-in-ome-zarr/55409
+      * https://forum.image.sc/t/deciding-on-optimal-chunk-size/63023
+      * https://github.com/thewtex/shardedstore/issues/17
 
-Discussion around Zarr V3 Protocol:
-* Issues in `zarr-specs`:
-  * https://github.com/zarr-developers/zarr-specs/issues/140
-  * https://github.com/zarr-developers/zarr-specs/issues/136
-  * https://github.com/zarr-developers/zarr-specs/issues/133
-  * https://github.com/zarr-developers/zarr-specs/issues/96
-  * https://github.com/zarr-developers/zarr-specs/issues/76
-  * https://github.com/zarr-developers/zarr-specs/issues/84
-  * https://github.com/zarr-developers/zarr-specs/issues/87
-  * https://github.com/zarr-developers/zarr-specs/issues/82
-  * https://github.com/zarr-developers/zarr-specs/issues/80
-  * https://github.com/zarr-developers/zarr-specs/issues/53
-  * https://github.com/zarr-developers/zarr-specs/issues/13
-  * https://github.com/zarr-developers/zarr-specs/pull/16
-* PRs in `zarr-specs`:
-  * https://github.com/zarr-developers/zarr-specs/pull/16
-  * https://github.com/zarr-developers/zarr-specs/pull/17
-  * https://github.com/zarr-developers/zarr-specs/pull/18
-  * https://github.com/zarr-developers/zarr-specs/pull/22
-  * https://github.com/zarr-developers/zarr-specs/pull/24
-  * https://github.com/zarr-developers/zarr-specs/pull/25
-  * https://github.com/zarr-developers/zarr-specs/pull/27
-  * https://github.com/zarr-developers/zarr-specs/pull/28
-  * https://github.com/zarr-developers/zarr-specs/pull/29
-  * https://github.com/zarr-developers/zarr-specs/pull/30
-  * https://github.com/zarr-developers/zarr-specs/pull/31
-  * https://github.com/zarr-developers/zarr-specs/pull/32
-  * https://github.com/zarr-developers/zarr-specs/pull/34
-  * https://github.com/zarr-developers/zarr-specs/pull/35
-  * https://github.com/zarr-developers/zarr-specs/pull/24
-  * https://github.com/zarr-developers/zarr-specs/pull/54
-  * https://github.com/zarr-developers/zarr-specs/pull/67
-  * https://github.com/zarr-developers/zarr-specs/pull/143
-  * https://github.com/zarr-developers/zarr-specs/pull/146
+3. Discussion around Zarr V3 Protocol:
+    * Issues in `zarr-specs`:
+      * Zarr V3 Mission:
+        * https://github.com/zarr-developers/zarr-specs/issues/140
+      * Zarr V3 Implementation(Zarrita):
+        * https://github.com/zarr-developers/zarr-specs/issues/84
+      * Content-addressable Storage Transformer for Zarr V3:
+        * https://github.com/zarr-developers/zarr-specs/issues/82
+      * Additional discussions related to Zarr V3:
+        * https://github.com/zarr-developers/zarr-specs/issues/53
+        * https://github.com/zarr-developers/zarr-specs/issues/13
+    * PRs in `zarr-specs`:
+      * Zarr V3 Protocol Development Branch:
+        * https://github.com/zarr-developers/zarr-specs/pull/16
+      * Zarr V3 Conceptual Model, Data Types, Chunks layouts, Codecs and
+      other important changes: 
+        * https://github.com/zarr-developers/zarr-specs/pull/17
+        * https://github.com/zarr-developers/zarr-specs/pull/18
+        * https://github.com/zarr-developers/zarr-specs/pull/22
+        * https://github.com/zarr-developers/zarr-specs/pull/24
+        * https://github.com/zarr-developers/zarr-specs/pull/25
+        * https://github.com/zarr-developers/zarr-specs/pull/27
+        * https://github.com/zarr-developers/zarr-specs/pull/28
+        * https://github.com/zarr-developers/zarr-specs/pull/29
+        * https://github.com/zarr-developers/zarr-specs/pull/30
+        * https://github.com/zarr-developers/zarr-specs/pull/32
+        * https://github.com/zarr-developers/zarr-specs/pull/35
+      * Additional changes to Zarr V3 Protocol:
+        * https://github.com/zarr-developers/zarr-specs/pull/54
+        * https://github.com/zarr-developers/zarr-specs/pull/143
+        * https://github.com/zarr-developers/zarr-specs/pull/146
+
 
 ## References and Footnotes
 
