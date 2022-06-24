@@ -397,13 +397,7 @@ implemented as storage transformers:
 
 ## Related Work
 
-@@TODO
-
-This section should list relevant and/or similar technologies,
-possibly in other libraries. It does not need to be comprehensive,
-just list the major examples of prior and relevant art.
-
-Related work for sharding:
+Related work for sharding (motivation for storage transformers):
 * Neuroglancer precomputed format supports sharding:
   https://github.com/google/neuroglancer/blob/master/src/neuroglancer/datasource/precomputed/sharded.md
 * webKnossos-wrap, blocks correspond to Zarr chunks, files to shards:
@@ -431,14 +425,6 @@ hierarchy in a store (locally or in the cloud), read and write
 arrays (in various formats) and groups in the hierarchy, and explore
 the hierarchy.
 
-
-## Alternatives
-
-@@TODO
-
-If there were any alternative solutions to solving the same problem,
-they should be discussed here, along with a justification for the
-chosen approach.
 
 ## Discussion
 
