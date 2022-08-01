@@ -33,16 +33,14 @@ Refer to [this](https://jekyllrb.com/docs/) to install Jekyll.
 
 Steps to contribute:
 
-``` 
 1. Fork this repo
 2. cd into the forked repo
-3. Type $ bundle exec jekyll
-serve --incremental
-4. Open a browser and go to localhost:4000/ to see the
-website
-5. Make desired changes, save them and refresh localhost:4000/ to see
-the changes
-```
+3. Type `bundle exec jekyll serve --incremental`
+  or `docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve`
+4. Open a browser and go to https://localhost:4000/ to see the
+   website
+5. Make desired changes, save them and refresh https://localhost:4000/ to see
+   the changes
 
 Once done, push your changes to your fork and open a
 [GitHub pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
