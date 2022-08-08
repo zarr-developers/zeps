@@ -37,9 +37,9 @@ Steps to contribute:
 2. cd into the forked repo
 3. Type `bundle exec jekyll serve --incremental`
   or `docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve`
-4. Open a browser and go to https://localhost:4000/ to see the
+4. Open a browser and go to http://localhost:4000/zeps/ to see the
    website
-5. Make desired changes, save them and refresh https://localhost:4000/ to see
+5. Make desired changes, save them and refresh http://localhost:4000/zeps/ to see
    the changes
 
 Once done, push your changes to your fork and open a
