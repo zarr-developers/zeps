@@ -9,4 +9,4 @@ permalink: /template/
 
 # ZEP Template and Instructions
 
-Template and instructions for proposing a new ZEP.
+### Template and instructions for proposing a new ZEP.
