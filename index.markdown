@@ -32,16 +32,20 @@ We intend ZEPs to be the primary mechanism for evolving the spec, collecting
 community input on major issues and documenting the design decision that has
 gone into Zarr.
 
+### ZEP Meetings 🧑🏻‍💻
+
+We hold bi-weekly ZEPs meetings to propose, discuss, review and finalize discussions around current ZEPs and Zarr Specification. More info available here: [https://zarr.dev/zeps/meetings/](https://zarr.dev/zeps/meetings/)
+
 ---
 
-### Contributing
+### Contributing 🤝🏻
 
 If you wish to contribute to Zarr's codebase, propose a new ZEP(s), website, blog
 posts or in any way, please visit Zarr's GitHub [here](https://github.com/zarr-developers/).
 You can discuss the change you want to see by opening an issue in the appropriate
 repository, or if the issue is already present, feel free to submit a pull request.
 
-### Code of Conduct
+### Code of Conduct ⚖️
 
 ZEPs are governed by Zarr Community's
 [CODE OF CONDUCT](https://github.com/zarr-developers/.github/blob/main/CODE_OF_CONDUCT.md).
