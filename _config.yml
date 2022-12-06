@@ -39,8 +39,8 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 
 # Aux links for the upper right navigation
 aux_links:
-  "Zarr on GitHub":
-    - "//github.com/zarr-developers/"
+  "Zarr Homepage":
+    - "https://zarr.dev/"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
