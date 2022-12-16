@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: join the community
 permalink: /join-community/
 ---
