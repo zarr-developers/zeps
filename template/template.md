@@ -19,6 +19,8 @@ Type: <Specification | Informational | Process>
 
 Created: <date created on, in dd-mmm-yyyy format>
 
+Discussion: <url> (link to zarr-developers post for discussion)
+
 Resolution: <url> (required for Accepted | Rejected | Withdrawn)
 ```
 
