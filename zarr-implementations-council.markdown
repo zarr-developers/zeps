@@ -16,7 +16,9 @@ The current list of implementations which are participating in this process are 
 
 - [google/tensorstore](https://github.com/google/tensorstore) represented by [Jeremy Maitin-Shepard](https://github.com/jbms) ([May 2022 – present](https://github.com/zarr-developers/governance/issues/22))
 
-- [freeman-lab/zarr-js](https://github.com/freeman-lab/zarr-js) represented by [Jeremy Freeman](https://github.com/freeman-lab) ([May 2022 – present](https://github.com/zarr-developers/governance/issues/27))
+- [freeman-lab/zarr-js](https://github.com/freeman-lab/zarr-js):
+	- represented by [Jeremy Freeman](https://github.com/freeman-lab) ([May 2022 – March 2023](https://github.com/zarr-developers/governance/issues/27))
+	- represented by [Anderson Banihirwe](https://github.com/andersy005) ([March 2023 - present](https://github.com/zarr-developers/governance/pull/36))
 
 - [gzuidhof/zarr.js](https://github.com/gzuidhof/zarr.js) represented by [Trevor Manz](https://github.com/manzt) ([May 2022 – present](https://github.com/zarr-developers/governance/issues/28))
 
