@@ -2,7 +2,7 @@
 layout: default
 title: ZEP meetings
 description: Information about bi-weekly ZEP meetings
-nav_order: 5
+nav_order: 7
 has_children: true
 permalink: /meetings/
 ---
