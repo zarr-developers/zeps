@@ -13,6 +13,7 @@ build:
     - asdf install ruby 3.1.2
     - asdf global ruby 3.1.2
     - gem install bundler
+    - gem install jekyll-include-cache
     - bundle config set --local deployment 'true'
     - bundle config set --local without development
     - bundle install
