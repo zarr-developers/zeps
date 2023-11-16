@@ -2,7 +2,7 @@
 layout: default
 title: draft ZEPs
 description: List of Draft ZEPs
-nav_order: 3
+nav_order: 4
 has_children: true
 permalink: /draft_zeps/
 ---
