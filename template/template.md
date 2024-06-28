@@ -15,13 +15,11 @@ Author: <list of authors’ real name and email addresses>
 
 Status: < Draft | Active | Accepted | Deferred | Rejected | Withdrawn | Final | Superseded >
 
-Type: <Specification | Informational | Process>
+Type: <Specification | Lean | Informational | Process>
 
-Created: <date created on, in dd-mmm-yyyy format>
+Created: <date created on, in yyyy-mm-dd format>
 
 Discussion: <url> (link to zarr-developers post for discussion)
-
-Resolution: <url> (required for Accepted | Rejected | Withdrawn)
 ```
 
 ## Abstract
