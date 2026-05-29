@@ -2,7 +2,7 @@
 layout: default
 title: implementations council
 description: Representatives of various Zarr Implementations
-nav: false
+nav_exclude: true
 permalink: /zic/
 ---
 
