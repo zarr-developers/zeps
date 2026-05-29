@@ -8,4 +8,4 @@ permalink: /zic/
 
 # Zarr Implementation Council
 
-The Zarr Implementation Council (ZIC) has been dissolved and replaced by the Spec Committee in [ZEP 11](./active/ZEP0011.html).
+The Zarr Implementation Council (ZIC) was dissolved and superseded by the Spec Committee in [ZEP 11](./active/ZEP0011.html).
